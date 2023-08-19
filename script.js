@@ -7,6 +7,23 @@ async function api() {
         `;
 }
 
-document.getElementById("started").addEventListener("click", function () {
+function reDirect() {
   window.location = "./data.html";
-});
+}
+
+async function api2() {
+  let res = await fetch(ipApi);
+  let data = await res.json();
+  let dat = await fetch(`https://ipinfo.io/${data.ip}?token=ed21945aa0f605`);
+  let resData = await dat.json();
+
+  console.log(resData);
+
+  document.getElementById("ip-address").innerText = resData.ip;
+  document.getElementById("lat").innerText = resData.loc.slice(0, 7);
+  document.getElementById("long").innerText = resData.loc.slice(8, 15);
+  document.getElementById("city").innerText = resData.city;
+  document.getElementById("region").innerText = resData.region;
+  document.getElementById("Organization").innerText = resData.org;
+  document.getElementById("hostname").innerText = resData.hostname;
+}

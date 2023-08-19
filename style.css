@@ -98,6 +98,36 @@
   color: white;
 }
 
+header {
+  width: 100%;
+  /* height: fit-content; */
+  background-color: black;
+  padding: 20px 40px;
+}
+.ip-address {
+  color: #b8bccc;
+}
+.ip-address > span {
+  color: white;
+}
+.ip-data {
+  margin: 5px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+  /* grid-template-columns: 250px 250px 250px; */
+  color: #b8bccc;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+.ip-data > div > p {
+  /* width: 250px; */
+  margin: 10px;
+  width: 100%;
+}
+.ip-data > div > p > span {
+  color: white;
+  /* font-size: 2vw; */
+}
 @media (max-width: 900px) {
   .image,
   .ip {
