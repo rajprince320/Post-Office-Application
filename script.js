@@ -51,7 +51,12 @@ async function search() {
     `https://api.postalpincode.in/pincode/${!value ? pinCode : value}`
   );
   let pinData = await pin.json();
-  if (pinData[0].Status === "Error") {
+  if (value.length !== 6 && pinData[0].Status === "Error") {
+    cont.innerHTML = null;
+    cont.innerHTML = `<h1>Loading...</h1>`;
+  } else if (value.length === 6 && pinData[0].Status === "Error") {
+    cont.innerHTML = null;
+    cont.innerHTML = `<h1>Enter Valid Pincode</h1>`;
   } else {
     cont.innerHTML = null;
     for (let i = 0; i < pinData[0].PostOffice.length; i++) {
