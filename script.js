@@ -28,7 +28,23 @@ async function api2() {
     "map"
   ).src = `https://maps.google.com/maps?q=${resData.loc}&z=15&output=embed`;
   document.getElementById("timeZone").innerText = resData.timezone;
-  document.getElementById("date").innerText = new Date();
+  document.getElementById("date").innerText = new Date().toLocaleString(
+    "en-US",
+    { timeZone: resData.timeZone }
+  );
   document.getElementById("pin").innerText = resData.postal;
-  document.getElementById("msg").innerText = resData.postal.length;
+  let pin = await fetch(
+    `https://api.postalpincode.in/pincode/${resData.postal}`
+  );
+  let pinData = await pin.json();
+  document.getElementById("msg").innerText = pinData[0].Message;
+  console.log(pinData[0].Message);
+}
+
+async function search() {
+  let value = document.getElementById("search").value;
+  let pin = await fetch(
+    `https://api.postalpincode.in/pincode/${resData.postal}`
+  );
+  let pinData = await pin.json();
 }

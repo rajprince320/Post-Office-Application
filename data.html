@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Post Office Application</title>
   </head>
   <body onload="api2()">
@@ -38,6 +46,41 @@
         <p>Date And Time: <span id="date"></span></p>
         <p>Pincode: <span id="pin"></span></p>
         <p>Message: <span id="msg"></span></p>
+      </div>
+    </section>
+    <section class="post-office">
+      <h1>Post Offices Near You</h1>
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          placeholder="Search By Name"
+          id="search"
+          onkeyup="search()"
+        />
+      </div>
+      <div class="offices-container">
+        <div class="card">
+          <p>Name <span></span></p>
+          <p>Branch type <span></span></p>
+          <p>Delivery Status <span></span></p>
+          <p>District <span></span></p>
+          <p>Division <span></span></p>
+        </div>
+        <div class="card">
+          <p>Name <span></span></p>
+          <p>Branch type <span></span></p>
+          <p>Delivery Status <span></span></p>
+          <p>District <span></span></p>
+          <p>Division <span></span></p>
+        </div>
+        <div class="card">
+          <p>Name <span></span></p>
+          <p>Branch type <span></span></p>
+          <p>Delivery Status <span></span></p>
+          <p>District <span></span></p>
+          <p>Division <span></span></p>
+        </div>
       </div>
     </section>
     <script src="./script.js"></script>
