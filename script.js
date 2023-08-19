@@ -17,8 +17,6 @@ async function api2() {
   let dat = await fetch(`https://ipinfo.io/${data.ip}?token=ed21945aa0f605`);
   let resData = await dat.json();
 
-  console.log(resData);
-
   document.getElementById("ip-address").innerText = resData.ip;
   document.getElementById("lat").innerText = resData.loc.slice(0, 7);
   document.getElementById("long").innerText = resData.loc.slice(8, 15);
@@ -29,4 +27,8 @@ async function api2() {
   document.getElementById(
     "map"
   ).src = `https://maps.google.com/maps?q=${resData.loc}&z=15&output=embed`;
+  document.getElementById("timeZone").innerText = resData.timezone;
+  document.getElementById("date").innerText = new Date();
+  document.getElementById("pin").innerText = resData.postal;
+  document.getElementById("msg").innerText = resData.postal.length;
 }

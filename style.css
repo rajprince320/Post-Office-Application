@@ -159,6 +159,17 @@ header {
   text-align: center;
   color: white;
 }
+.more-info-data {
+  gap: 20px;
+  padding: 30px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  color: #b8bccc80;
+}
+.more-info-data > p > span {
+  color: white;
+}
 
 @media (max-width: 900px) {
   .image,
