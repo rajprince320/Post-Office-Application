@@ -4,8 +4,12 @@ var pinCode;
 async function api() {
   let res = await fetch(ipApi);
   let data = await res.json();
-  document.getElementById("ip").innerHTML = `<span>${data.ip}</span>
+  if (data.Status === 404) {
+    alert(data.message);
+  } else {
+    document.getElementById("ip").innerHTML = `<span>${data.ip}</span>
         `;
+  }
 }
 
 function reDirect() {
@@ -24,7 +28,7 @@ async function api2() {
   document.getElementById("city").innerText = resData.city;
   document.getElementById("region").innerText = resData.region;
   document.getElementById("Organization").innerText = resData.org;
-  document.getElementById("hostname").innerText = resData.hostname;
+  document.getElementById("hostname").innerText = resData.Hostname;
   document.getElementById(
     "map"
   ).src = `https://maps.google.com/maps?q=${resData.loc}&z=15&output=embed`;
