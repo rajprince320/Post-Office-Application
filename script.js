@@ -3,10 +3,8 @@ const ipApi = "https://api.ipify.org?format=json";
 async function api() {
   let res = await fetch(ipApi);
   let data = await res.json();
-  document.getElementById(
-    "ip"
-  ).innerHTML = `<h1>Your Current IP Address is <span>${data.ip}</span></h1>
-       <button id="started">Get Started</button> `;
+  document.getElementById("ip").innerHTML = `<span>${data.ip}</span>
+        `;
 
   //   console.log(data.ip);
 }
