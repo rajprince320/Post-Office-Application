@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(100vw-50vw, 1fr)); */
+  flex-wrap: wrap;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  color: white;
+  width: 50%;
+  background-color: black;
+  height: 100vh;
+  /* transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1); */
+}
+.ip {
+  /* flex: 5; */
+  height: 100vh;
+  width: 50%;
+  background-color: #575a85;
+  /* transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1); */
+}
+.image > h1 {
+  color: #575a85;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.image > p {
+  width: 100%;
+  margin: 3rem 1rem;
+  font-size: 1.5rem;
+}
+.image > img {
+  align-self: center;
+  width: 50vh;
+}
+.ip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+.ip > h1 {
+  color: #b8bccc;
+  font-size: 2rem;
+}
+.ip > h1 > span {
+  color: white;
+  font-size: 2rem;
+}
+.ip > button {
+  margin-top: 20px;
+  color: #b8bccc;
+  background-color: transparent;
+  border: 2px solid #b8bccc;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+}
+.scroll {
+  display: none;
+  cursor: pointer;
+  font-size: 25px;
+  margin: auto 0px;
+  align-self: center;
+  text-align: center;
+  animation: pulse 3s infinite;
+}
+@keyframes pulse {
+  0% {
+    scale: 0.5;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.5;
+  }
+}
+.scroll > a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .image,
+  .ip {
+    width: 100%;
+  }
+  .image > p {
+    width: 80%;
+  }
+  .scroll {
+    display: block;
+  }
+  .image > img {
+    width: 18rem;
+  }
+}

@@ -3,10 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Post Office Application</title>
   </head>
-  <body>
+  <body onload="api()">
+    <div class="container">
+      <div class="image">
+        <h1>Post Office Application</h1>
+        <p>
+          This Application Allows you to extract information about the nearest
+          Post Offices, based on your location.
+        </p>
+        <img src="./undraw_messenger_re_8bky 1.png" alt="image" />
+
+        <div class="scroll">
+          <a href="#ip"><p>Scroll</p></a>
+          <a href="#ip"><i class="fas fa-angle-down"></i></a>
+        </div>
+      </div>
+      <div class="ip" id="ip">
+        <!-- <h1>Your Current IP Address is <span>127.0.01</span></h1>
+        <button>Get Started</button> -->
+        <!-- <button id="started">Get Started</button> -->
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
