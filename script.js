@@ -26,4 +26,7 @@ async function api2() {
   document.getElementById("region").innerText = resData.region;
   document.getElementById("Organization").innerText = resData.org;
   document.getElementById("hostname").innerText = resData.hostname;
+  document.getElementById(
+    "map"
+  ).src = `https://maps.google.com/maps?q=${resData.loc}&z=15&output=embed`;
 }

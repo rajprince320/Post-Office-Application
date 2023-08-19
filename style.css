@@ -7,6 +7,9 @@
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .container {
   width: 100vw;
   height: 100vh;
@@ -128,6 +131,35 @@ header {
   color: white;
   /* font-size: 2vw; */
 }
+.mapView {
+  background-color: #575a85;
+  width: 100%;
+  /* height: 80vh; */
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+.mapView > h1 {
+  font-family: "Montserrat", sans-serif;
+
+  color: #b8bccc;
+  margin: 10px;
+}
+.mapView > iframe {
+  width: 80%;
+  height: 80vh;
+  margin: 40px 0px;
+}
+.more-information {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
 @media (max-width: 900px) {
   .image,
   .ip {
