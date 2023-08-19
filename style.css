@@ -113,7 +113,7 @@ header {
 .ip-data {
   margin: 5px 0px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
   /* grid-template-columns: 250px 250px 250px; */
   color: #b8bccc;
   font-size: 1.5rem;
