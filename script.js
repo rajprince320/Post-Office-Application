@@ -5,10 +5,8 @@ async function api() {
   let data = await res.json();
   document.getElementById("ip").innerHTML = `<span>${data.ip}</span>
         `;
-
-  //   console.log(data.ip);
 }
 
 document.getElementById("started").addEventListener("click", function () {
-  alert("hii");
+  window.location = "./data.html";
 });
