@@ -53,35 +53,14 @@
       <div class="search">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input
+          minlength="6"
           type="text"
           placeholder="Search By Name"
           id="search"
           onkeyup="search()"
         />
       </div>
-      <div class="offices-container">
-        <div class="card">
-          <p>Name <span></span></p>
-          <p>Branch type <span></span></p>
-          <p>Delivery Status <span></span></p>
-          <p>District <span></span></p>
-          <p>Division <span></span></p>
-        </div>
-        <div class="card">
-          <p>Name <span></span></p>
-          <p>Branch type <span></span></p>
-          <p>Delivery Status <span></span></p>
-          <p>District <span></span></p>
-          <p>Division <span></span></p>
-        </div>
-        <div class="card">
-          <p>Name <span></span></p>
-          <p>Branch type <span></span></p>
-          <p>Delivery Status <span></span></p>
-          <p>District <span></span></p>
-          <p>Division <span></span></p>
-        </div>
-      </div>
+      <div class="offices-container" id="offices-container"></div>
     </section>
     <script src="./script.js"></script>
   </body>

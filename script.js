@@ -1,4 +1,5 @@
 const ipApi = "https://api.ipify.org?format=json";
+var pinCode;
 
 async function api() {
   let res = await fetch(ipApi);
@@ -38,13 +39,29 @@ async function api2() {
   );
   let pinData = await pin.json();
   document.getElementById("msg").innerText = pinData[0].Message;
-  console.log(pinData[0].Message);
+
+  pinCode = resData.postal;
+  search();
 }
 
 async function search() {
+  let cont = document.getElementById("offices-container");
   let value = document.getElementById("search").value;
   let pin = await fetch(
-    `https://api.postalpincode.in/pincode/${resData.postal}`
+    `https://api.postalpincode.in/pincode/${!value ? pinCode : value}`
   );
   let pinData = await pin.json();
+  if (pinData[0].Status === "Error") {
+  } else {
+    cont.innerHTML = null;
+    for (let i = 0; i < pinData[0].PostOffice.length; i++) {
+      cont.innerHTML += `<div class="card">
+          <p>Name: <span>${pinData[0].PostOffice[i].Name}</span></p>
+          <p>Branch type: <span>${pinData[0].PostOffice[i].BranchType}</span></p>
+          <p>Delivery Status: <span>${pinData[0].PostOffice[i].DeliveryStatus}</span></p>
+          <p>District: <span>${pinData[0].PostOffice[i].District}</span></p>
+          <p>Division: <span>${pinData[0].PostOffice[i].Division}</span></p>
+        </div>`;
+    }
+  }
 }

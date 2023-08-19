@@ -210,6 +210,15 @@ header {
   text-align: start;
   padding: 30px;
 }
+.card > p {
+  font-size: 1.5rem;
+  color: #b8bccc;
+}
+.card > p > span {
+  font-size: 1.7rem;
+  color: white;
+}
+
 @media (max-width: 900px) {
   .image,
   .ip {
